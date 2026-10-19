@@ -1,0 +1,112 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #1f3c88;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #e0e0e0;
+      padding: 10px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    nav button {
+      padding: 10px 15px;
+      border: none;
+      background: #1f3c88;
+      color: white;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    nav button:hover {
+      background: #14275c;
+    }
+
+    section {
+      display: none;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      margin-top: 20px;
+      border-radius: 8px;
+    }
+
+    section.activa {
+      display: block;
+    }
+
+    input, select {
+      padding: 8px;
+      margin: 5px;
+      width: 220px;
+    }
+
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center;
+    }
+
+    th {
+      background: #1f3c88;
+      color: white;
+    }
+
+    .aprobado {
+      background: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .rechazado {
+      background: #f8d7da;
+      color: #721c24;
+      padding: 15px;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .card {
+      background: #f1f1f1;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  
+.campos { display:flex; flex-wrap:wrap; gap:10px; }
+.campos label { display:flex; flex-direction:column; font-weight:bold; }
+.campos input { margin-left:0; max-width:100%; box-sizing:border-box; }
+.tabla-contenedor { overflow-x:auto; }
+input[readonly] { background:#eee; }
+[role="status"] { min-height:20px; }
+@media(max-width:600px) { section { margin:12px; padding:15px; } }
