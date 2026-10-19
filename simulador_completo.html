@@ -15,6 +15,7 @@
 <nav>
   <button onclick="mostrarSeccion('parametros')">Parámetros</button>
   <button onclick="mostrarSeccion('clientes')">Clientes</button>
+  <button onclick="mostrarSeccion('creditos')">Créditos</button>
 </nav>
 
 <section id="parametros" class="activa">
@@ -62,6 +63,29 @@
 </section>
 
 
+
+<section id="creditos">
+  <h2>Solicitar Crédito</h2>
+
+  <label for="buscarCedulaCredito">Cédula del cliente</label>
+  <input type="text" id="buscarCedulaCredito" placeholder="Ingrese la cédula" oninput="invalidarBusquedaCredito()">
+  <button onclick="buscarClienteCredito()">Buscar cliente</button>
+
+  <div id="datosClienteCredito" class="card"></div>
+
+  <label for="montoCredito">Monto solicitado ($)</label>
+  <input type="number" id="montoCredito" min="0.01" step="any" placeholder="Ej. 1200" oninput="limpiarResultadoCredito()">
+  <label for="plazoCredito">Plazo en meses</label>
+  <input type="number" id="plazoCredito" min="1" step="1" placeholder="Ej. 12" oninput="limpiarResultadoCredito()">
+
+  <br>
+
+  <button onclick="calcularCredito()">Calcular crédito</button>
+
+  <p>Modelo del taller: interés simple anual. Capacidad mensual = ingresos - egresos. La tasa se configura en Parámetros.</p>
+  <div id="resultadoCredito" role="status"></div>
+
+</section>
 
 <script src="utilitarios.js"></script>
 <script src="simulador_completo.js"></script>
